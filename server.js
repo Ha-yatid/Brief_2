@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+
 const app = express();
 app.use(bodyParser.json());
 
@@ -18,8 +19,16 @@ app.use((req, res, next) => {
 });
 
 // Use the user routes
-const userRouter = require('./routes/user');
+const userRouter = require('./routes/UserRoutes');
 app.use('/users', userRouter);
+
+// Use the Product routes
+const productRoutes = require('./routes/ProductRoutes');
+app.use('/products', productRoutes);
+
+// Use the Order routes
+const orderRoutes = require('./routes/OrderRoutes');
+app.use('/orders', orderRoutes);
 
 
 //running server
