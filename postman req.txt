@@ -1,0 +1,9 @@
+Get localhost:3000/users
+Post localhost:3000/users   
+body json {
+	"name": "User3",
+    "email":"user3@exemple.com",
+    "age":24
+}
+Put    localhost:3000/users/66772d1fc2381cc911afe558
+delete localhost:3000/users/66773b94c2381cc911afe568
